@@ -616,7 +616,7 @@ HTML
 
         <hr />
 
-        <h2>2. Ejecución y Configuración (Paso Crítico)</h2>
+        <h3>2. Ejecución y Configuración (Paso Crítico)</h3>
         <p>
             Inicia el instalador. Durante el proceso, presta atención a la
             <strong>Selección de tareas adicionales</strong>. Es fundamental
@@ -624,8 +624,9 @@ HTML
         </p>
         <ul>
             <li>[x] Crear un acceso directo en el escritorio.</li>
+            <strong>
             <li>[x] Agregar la acción "Abrir con Code" al menú contextual de archivos.</li>
-       
+            </strong>
             <li>[x] Registrar Code como editor para tipos de archivo admitidos.</li>
           
         </ul>
@@ -647,6 +648,7 @@ HTML
 
         <article id="productividad-visual">
             <h3>Productividad Visual</h3>
+            <li>Busca en extensiones (<code>Ctrl + Shift + X</code></li>
             <ul>
                 <li><strong>Live Server:</strong> Actualización automática del navegador al guardar.</li>
                 <li><strong>Color Highlight:</strong> Visualización de colores directamente en el código CSS.</li>
@@ -691,60 +693,92 @@ HTML
     <section id="atajos-vscode">
         <h1>Guía Rápida de Atajos y Trucos</h1>
         <p>Domina el teclado para programar con la velocidad de un profesional.</p>
+<h1>⚡ ATAJOS COMPLETOS VS CODE</h1>
 
-        <h2>🚀 VELOCIDAD (Emmet & Estructura)</h2>
-        <ul>
-            <li><strong>Estructura HTML rápida:</strong> <code>!</code> + <code>Enter</code>.</li>
-            <li><strong>Cierre de Etiquetas:</strong> <code>Nombre de etiqueta</code> + <code>Tab</code>.</li>
-            <li><strong>Texto de relleno:</strong> <code>lorem</code> + <code>Enter</code>.</li>
-        </ul>
+<h2>📁 ARCHIVOS Y CARPETAS (PROYECTOS)</h2>
+<div class="box">
+  <p><span class="key">Ctrl + P</span> → Abrir archivo rápidamente</p>
+  <p><span class="key">Ctrl + O</span> → Abrir archivo</p>
+  <p><span class="key">Ctrl + K</span> → <span class="key">Ctrl + O</span> → 📂 Abrir carpeta</p>
+  <p><span class="key">Ctrl + Shift + N</span> → Nueva ventana de VS Code</p>
+  <p><span class="key">Ctrl + W</span> → Cerrar archivo</p>
+  <p><span class="key">Ctrl + K</span> → <span class="key">F</span> → Cerrar carpeta</p>
+</div>
 
-        <h2>🎨 EDICIÓN (Magia con el cursor)</h2>
-        <table border="1" cellpadding="5" style="width: 100%; text-align: left;">
-            <thead>
-                <tr style="background-color: #f2f2f2;">
-                    <th>Acción</th>
-                    <th>Teclas</th>
-                    <th>Efecto</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Multicursor</strong></td>
-                    <td><code>Alt + Clic</code></td>
-                    <td>Escribe en varios lugares a la vez.</td>
-                </tr>
-                <tr>
-                    <td><strong>Selección Múltiple</strong></td>
-                    <td><code>Ctrl + D</code></td>
-                    <td>Selecciona la palabra actual y la siguiente igual.</td>
-                </tr>
-                <tr>
-                    <td><strong>Clonación</strong></td>
-                    <td><code>Shift + Alt + ↓</code></td>
-                    <td>Duplica la línea hacia abajo.</td>
-                </tr>
-                <tr>
-                    <td><strong>Teletransporte</strong></td>
-                    <td><code>Alt + ↑ / ↓</code></td>
-                    <td>Mueve una línea entera de lugar.</td>
-                </tr>
-            </tbody>
-        </table>
+<h2>📂 EXPLORADOR Y NAVEGACIÓN</h2>
+<div class="box">
+  <p><span class="key">Ctrl + Shift + E</span> → Explorador de archivos</p>
+  <p><span class="key">Ctrl + B</span> → Mostrar/ocultar barra lateral</p>
+  <p><span class="key">Ctrl + Shift + F</span> → Buscar en todo el proyecto</p>
+  <p><span class="key">Ctrl + Shift + G</span> → Control de versiones (Git)</p>
+  <p><span class="key">Ctrl + Shift + D</span> → Panel de depuración</p>
+  <p><span class="key">Ctrl + Shift + X</span> → Extensiones</p>
+</div>
 
-        <h2>🧹 ORDEN Y VISTA</h2>
-        <ul>
-            <li><strong>Auto-Formateo:</strong> <code>Shift + Alt + F</code>.</li>
-            <li><strong>Ajuste de Línea:</strong> <code>Alt + Z</code> (Para que el código no se desborde).</li>
-            <li><strong>Comentar bloque:</strong> <code>Ctrl + /</code>.</li>
-            <li><strong>Modo Zen:</strong> <code>Ctrl + K</code> → <code>Z</code> (Pantalla limpia).</li>
-            <li><strong>Zoom:</strong> <code>Ctrl + "+" / "-"</code> (Aumentar/Reducir) y <code>Ctrl + 0</code> (Reset).</li>
-        </ul>
+<h2>✍️ EDICIÓN BÁSICA</h2>
+<div class="box">
+  <p><span class="key">Ctrl + X</span> → Cortar línea</p>
+  <p><span class="key">Ctrl + C</span> → Copiar línea</p>
+  <p><span class="key">Ctrl + V</span> → Pegar</p>
+  <p><span class="key">Ctrl + Z</span> → Deshacer</p>
+  <p><span class="key">Ctrl + Y</span> → Rehacer</p>
+  <p><span class="key">Ctrl + Enter</span> → Nueva línea abajo</p>
+  <p><span class="key">Ctrl + Shift + Enter</span> → Nueva línea arriba</p>
+</div>
+
+<h2>🧠 EDICIÓN AVANZADA (MAGIA REAL)</h2>
+
+<h3>🖱️ Multicursor</h3>
+<div class="box">
+  <p><span class="key">Alt + Clic</span> → Cursor múltiple</p>
+  <p><span class="key">Ctrl + Alt + ↑ / ↓</span> → Agregar cursores</p>
+  <p><span class="key">Ctrl + Shift + L</span> → Seleccionar todas las coincidencias</p>
+</div>
+
+<h3>🔎 Selección inteligente</h3>
+<div class="box">
+  <p><span class="key">Ctrl + D</span> → Siguiente coincidencia</p>
+  <p><span class="key">Ctrl + U</span> → Deshacer selección</p>
+  <p><span class="key">Ctrl + Shift + → / ←</span> → Selección por palabras</p>
+  <p><span class="key">Ctrl + Shift + K</span> → Borrar línea</p>
+</div>
+
+<h3>📋 Duplicar y mover</h3>
+<div class="box">
+  <p><span class="key">Shift + Alt + ↓ / ↑</span> → Duplicar línea</p>
+  <p><span class="key">Alt + ↓ / ↑</span> → Mover línea</p>
+  <p><span class="key">Shift + Alt + Drag</span> → Copiar bloque</p>
+</div>
+
+<div class="box">
+  <p><span class="key">Ctrl + F</span> → Buscar</p>
+  <p><span class="key">Ctrl + H</span> → Reemplazar</p>
+  <p><span class="key">F3 / Shift + F3</span> → Siguiente / anterior</p>
+  <p><span class="key">Alt + Enter</span> → Seleccionar todas</p>
+</div>
+
+<h2>🧹 FORMATO Y ORDEN</h2>
+<div class="box">
+  <p><span class="key">Shift + Alt + F</span> → Formatear código</p>
+  <p><span class="key">Alt + Z</span> → Ajuste de línea</p>
+  <p><span class="key">Ctrl + /</span> → Comentar línea</p>
+  <p><span class="key">Ctrl + K → Ctrl + C</span> → Comentar bloque</p>
+  <p><span class="key">Ctrl + K → Ctrl + U</span> → Descomentar bloque</p>
+</div>
+
+<h2>🧘 VISTA Y PRODUCTIVIDAD</h2>
+<div class="box">
+  <p><span class="key">Ctrl + K → Z</span> → Modo Zen</p>
+  <p><span class="key">Ctrl + + / Ctrl + -</span> → Zoom</p>
+  <p><span class="key">Ctrl + 0</span> → Reset zoom</p>
+  <p><span class="key">F11</span> → Pantalla completa</p>
+  <p><span class="key">Ctrl + `</span> → Terminal integrada</p>
+</div>
     </section>
     </div>
 
     <footer>
       <p>IPEM 146 - Sistemas Digitales | Clase 1 y 2 | 2026</p>
     </footer>
-  </body>
+  </bode>
 </html>
