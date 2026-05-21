@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* Estilos optimizados para modernizar el diseño */
+      :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --accent: #e67e22;
+        --bg: #f4f7f6;
+        --text: #333;
+        --white: #ffffff;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+      }
+
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: var(--bg);
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: var(--primary);
+        color: var(--white);
+        padding: 3rem 1rem;
+        text-align: center;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+      }
+      header p {
+        margin: 8px 0 0;
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .contenedor {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      section {
+        background: var(--white);
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+      }
+
+      h2 {
+        color: var(--primary);
+        border-left: 6px solid var(--secondary);
+        padding-left: 15px;
+        margin-top: 0;
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        color: var(--secondary);
+        margin-top: 25px;
+      }
+
+      .resumen {
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 18px;
+        border-radius: 10px;
+        border-left: 5px solid #4caf50;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+
+      .ejemplo {
+        background: #fff9c4;
+        color: #5d4037;
+        padding: 18px;
+        border-radius: 10px;
+        border: 1px solid #ffe082;
+        font-family: "Consolas", "Monaco", monospace;
+        margin: 20px 0;
+      }
+
+      .tip {
+        background: #e3f2fd;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid var(--secondary);
+        margin: 15px 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .columnas {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .columna {
+        flex: 1;
+        min-width: 280px;
+        background: #fcfcfc;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+      }
+
+      th,
+      td {
+        border: 1px solid #edf2f7;
+        padding: 14px;
+        text-align: left;
+      }
+
+      th {
+        background: var(--secondary);
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f8fafc;
+      }
+
+      .container {
+        border: 1px solid #e2e8f0;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      code {
+        display: block;
+        background: #1e1e1e;
+        color: #dcdcdc;
+        padding: 20px;
+        border-radius: 10px;
+        overflow-x: auto;
+        font-family: "Consolas", monospace;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        word-spacing: 10px;
+        white-space: pre-wrap; /* Mantiene el formato pero permite saltos si es necesario */
+      }
+
+      footer {
+        text-align: center;
+        padding: 3rem;
+        color: #94a3b8;
+        font-size: 0.95rem;
+      }
+
+      a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      /* Ajustes para checkboxes en la actividad */
+      ul {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+      ul li {
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+        section {
+          padding: 20px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Temas Dados</h1>
+    </header>
+    <div class="contenedor">
+
+  <section>
+    <h2>Sistema</h2>
+    <p>
+      El concepto de sistema se refiere a un conjunto de elementos que están
+      relacionados entre sí y trabajan juntos para cumplir una función o
+      alcanzar un objetivo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Sistema Digital</h2>
+    <p>
+      Un sistema digital es un conjunto de dispositivos electrónicos que
+      procesan, almacenan o transmiten información usando señales digitales
+      representadas por <b>0 y 1</b>.
+    </p>
+
+    <h3>Características principales</h3>
+    <ul>
+      <li>Utiliza señales binarias (0 y 1).</li>
+      <li>La información se procesa mediante circuitos lógicos.</li>
+      <li>Es más preciso y resistente al ruido que los sistemas analógicos.</li>
+    </ul>
+
+    <h3>Componentes básicos</h3>
+    <ul>
+      <li><b>Entradas:</b> reciben datos (teclado, sensores).</li>
+      <li><b>Procesamiento:</b> puertas lógicas y circuitos digitales.</li>
+      <li><b>Salidas:</b> muestran o envían el resultado (pantalla, impresora).</li>
+    </ul>
+
+    <h3>Ejemplos</h3>
+    <ul>
+      <li>Computadoras</li>
+      <li>Teléfonos celulares</li>
+      <li>Calculadoras</li>
+      <li>Relojes digitales</li>
+      <li>Consolas de videojuegos</li>
+    </ul>
+
+    <div class="resumen">
+      ✔ Un sistema digital trabaja con información en forma de bits (0 y 1).
+    </div>
+  </section>
+
+  <section>
+    <h2>Sistema Analógico</h2>
+    <p>
+      Un sistema analógico representa y procesa información mediante señales continuas.
+    </p>
+
+    <h3>Características</h3>
+    <ul>
+      <li>Utiliza señales continuas.</li>
+      <li>Los valores cambian de forma progresiva.</li>
+      <li>Es más sensible al ruido.</li>
+    </ul>
+
+    <h3>Ejemplos</h3>
+    <ul>
+      <li>Reloj con agujas</li>
+      <li>Radio analógica</li>
+      <li>Termómetro de mercurio</li>
+    </ul>
+
+    <div class="resumen">✔ Un sistema analógico usa señales continuas.</div>
+  </section>
+
+  <section>
+    <h2>BIT</h2>
+    <p>Un bit (binary digit) es la unidad más pequeña de información en informática.</p>
+
+    <h3>Características</h3>
+    <ul>
+      <li>Solo puede tener dos valores: 0 o 1.</li>
+      <li>Representa estados como encendido/apagado.</li>
+    </ul>
+
+    <h3>Relación con otras unidades</h3>
+    <ul>
+      <li>8 bits = 1 byte</li>
+      <li>Los bytes representan letras, números y símbolos.</li>
+    </ul>
+
+    <div class="resumen">✔ Un bit es la unidad básica de información digital.</div>
+  </section>
+
+  <section>
+    <h2>Sistema Binario</h2>
+    <p>El sistema binario utiliza solo dos números: <b>0 y 1</b>.</p>
+
+    <h3>Características</h3>
+    <ul>
+      <li>Su base es 2.</li>
+      <li>Cada posición representa una potencia de 2.</li>
+      <li>Es el sistema utilizado por las computadoras.</li>
+    </ul>
+
+    <div class="ejemplo">Ejemplo: 1011 = 8 + 0 + 2 + 1 = 11</div>
+  </section>
+
+  <section>
+    <h2>Conversiones</h2>
+
+    <h3>Decimal → Binario</h3>
+    <p>Dividir entre 2 y tomar los restos.</p>
+
+    <img class="dec_bin" src="dec a bin.jpg" alt="Decimal a Binario">
+
+    <h3>Binario → Decimal</h3>
+    <p>Sumar potencias de 2 según cada bit.</p>
+
+    <img class="dec_bin" src="bin a dec.jpg" alt="Binario a Decimal">
+
+    <h3>Conversión Automática</h3>
+    <p>
+      Calculadora online:
+      <a href="https://www.unitjuggler.com/numbersystems-convertir-decimal-a-binary.html?val=0" target="_blank">
+        Convertidor Decimal a Binario
+      </a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Tabla ASCII</h2>
+    <img class="ascii" src="ascii.jpg" alt="Tabla ASCII completa">
+  </section>
+
+  <section>
+    <h2>🧠 Ejercicios</h2>
+
+    <div class="columnas">
+      <div class="columna">
+        <h3>🔤 ASCII</h3>
+
+        <h4>Número → carácter</h4>
+        <ol>
+          <li>65 = ______</li>
+          <li>97 = ______</li>
+          <li>48 = ______</li>
+          <li>64 = ______</li>
+        </ol>
+
+        <h4>Decodificar</h4>
+        <ol>
+          <li>72 79 76 65 = ______</li>
+          <li>80 67 = ______</li>
+        </ol>
+      </div>
+
+      <div class="columna">
+        <h3>🔢 Sistemas Numéricos</h3>
+
+        <h4>Binario → Decimal</h4>
+        <ol>
+          <li>101₂ = ______</li>
+          <li>1101₂ = ______</li>
+          <li>1111₂ = ______</li>
+        </ol>
+
+        <h4>Decimal → Binario</h4>
+        <ol>
+          <li>5₁₀ = ______</li>
+          <li>10₁₀ = ______</li>
+          <li>18₁₀ = ______</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h2>Descubre el mensaje secreto</h2>
+      <p>Convierte los números binarios a decimal y forma la frase:</p>
+
+      <code>
+        01000101 01010011 00100000 01010101 01001110 00100000 01001010
+        01010101 01000101 01000111 01001111 00100000 01000100 01000101
+        00100000 01001100 01000001 01010000 01010010 01001111 01000111
+        01010010 01000001 01001101 01000001 01000011 01001001 01001111
+        01001110 00100000 01001100 01000001 00100000 01010100 01000101
+        01000011 01001110 01001111 01001100 01001111 01000111 01001001
+        01000001 00100000 01000101 01010011 00100000 01000110 01010101
+        01010100 01010101 01010010 01001111
+      </code>
+    </div>
+  </section>
+
+  <section id="hard">
+    <h2>Hardware</h2>
+    <p class="tip">
+      El hardware es la parte física de la computadora.
+    </p>
+  </section>
+
+  <section>
+    <h2>Software</h2>
+    <p>
+      El software es el conjunto de programas que hacen funcionar el hardware.
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
