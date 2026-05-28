@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -7,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistemas Digitales - Resumen Clase 1</title>
     <style>
-      a{
+      a {
         font-size: 25px;
       }
       /* Estilos optimizados para modernizar el diseño */
@@ -155,11 +153,22 @@
         background-color: #f8fafc;
       }
 
-      .container {
+      .container,
+      .box {
         border: 1px solid #e2e8f0;
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 10px;
+        background: #fdfdfd;
+      }
+
+      .key {
+        background: #e2e8f0;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-weight: bold;
+        color: #4a5568;
       }
 
       code {
@@ -172,8 +181,8 @@
         font-family: "Consolas", monospace;
         font-size: 0.95rem;
         line-height: 1.6;
-        word-spacing: 10px;
-        white-space: pre-wrap; /* Mantiene el formato pero permite saltos si es necesario */
+        word-spacing: 2px;
+        white-space: pre-wrap;
       }
 
       footer {
@@ -194,13 +203,28 @@
         text-decoration: underline;
       }
 
-      /* Ajustes para checkboxes en la actividad */
       ul {
         list-style-type: none;
         padding-left: 10px;
       }
       ul li {
         margin-bottom: 8px;
+      }
+
+      /* Estilos específicos para la nueva actividad de la tarjeta */
+      .opciones-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+      .opcion {
+        flex: 1;
+        min-width: 250px;
+        background: #f8fafc;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
       }
 
       @media (max-width: 600px) {
@@ -221,243 +245,459 @@
       <p>Prof. J. Pantaleo</p>
     </header>
 
-
-    <section id="instalacion">
-        <header>
-            <p><em>Software de Programación: Visual Studio Code</em></p>
-            <h1>Guía de Instalación para Windows</h1>
-      
+    <div class="contenedor">
+      <section id="instalacion">
+        <header
+          style="
+            background: none;
+            box-shadow: none;
+            padding: 0;
+            text-align: left;
+            color: inherit;
+          "
+        >
+          <p><em>Software de Programación: Visual Studio Code</em></p>
+          <h1 style="color: var(--primary); font-size: 2rem">
+            Guía de Instalación para Windows
+          </h1>
         </header>
-        <a href="anteriores.html">🙂‍↔️​Temas Anteriores</a>
+        <br />
+        <a href="anteriores.html">🙂‍↔️ Temas Anteriores</a>
         <h2>1. Obtener el archivo</h2>
         <p>
-            Entra en la web oficial:
-            <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.
+          Entra en la web oficial:
+          <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.
         </p>
         <p>
-            Haz clic en el botón azul <strong>"Download for Windows"</strong>. Se
-            descargará el instalador (ej. <em>VSCodeUserSetup-x64.exe</em>).
+          Haz clic en el botón azul <strong>"Download for Windows"</strong>. Se
+          descargará el instalador (ej. <em>VSCodeUserSetup-x64.exe</em>).
         </p>
 
         <hr />
 
         <h3>2. Ejecución y Configuración (Paso Crítico)</h3>
         <p>
-            Inicia el instalador. Durante el proceso, presta atención a la
-            <strong>Selección de tareas adicionales</strong>. Es fundamental
-            marcar todas las casillas:
+          Inicia el instalador. Durante el proceso, presta atención a la
+          <strong>Selección de tareas adicionales</strong>. Es fundamental
+          marcar todas las casillas:
         </p>
         <ul>
-            <li>[x] Crear un acceso directo en el escritorio.</li>
-            <strong>
-            <li>[x] Agregar la acción "Abrir con Code" al menú contextual de archivos.</li>
-            </strong>
-            <li>[x] Registrar Code como editor para tipos de archivo admitidos.</li>
-          
+          <li>[x] Crear un acceso directo en el escritorio.</li>
+          <strong>
+            <li>
+              [x] Agregar la acción "Abrir con Code" al menú contextual de
+              archivos.
+            </li>
+          </strong>
+          <li>
+            [x] Registrar Code como editor para tipos de archivo admitidos.
+          </li>
         </ul>
 
-        <p>Finalmente, haz clic en <strong>Instalar</strong> y luego en <strong>Finalizar</strong>.</p>
-    </section>
+        <p>
+          Finalmente, haz clic en <strong>Instalar</strong> y luego en
+          <strong>Finalizar</strong>.
+        </p>
+      </section>
 
-    <hr />
+      <hr />
 
-    <section id="configuracion">
+      <section id="configuracion">
         <h1>Configuración y Extensiones Web (HTML & CSS)</h1>
-        <p>Ajustes esenciales para trabajar con diseño web de forma eficiente.</p>
+        <p>
+          Ajustes esenciales para trabajar con diseño web de forma eficiente.
+        </p>
 
         <h2>1. El "Auto-Guardado"</h2>
         <p>Para no perder cambios ni olvidar guardar manualmente:</p>
         <ul>
-            <li>Ve a <strong>Archivo &gt; Autoguardado</strong>.</li>
+          <li>Ve a <strong>Archivo &gt; Autoguardado</strong>.</li>
         </ul>
 
         <article id="productividad-visual">
-            <h3>Productividad Visual</h3>
-            <li>Busca en extensiones (<code>Ctrl + Shift + X</code></li>
-            <ul>
-                <li><strong>Live Server:</strong> Actualización automática del navegador al guardar.</li>
-                <li><strong>Color Highlight:</strong> Visualización de colores directamente en el código CSS.</li>
-                <li><strong>CSS Peek:</strong> Acceso rápido a los estilos desde el archivo HTML usando <code>Ctrl + Clic</code>.</li>
-            </ul>
+          <h3>Productividad Visual</h3>
+          <p>Busca en extensiones (<code>Ctrl + Shift + X</code>):</p>
+          <ul>
+            <li>
+              <strong>Live Server:</strong> Actualización automática del
+              navegador al guardar.
+            </li>
+            <li>
+              <strong>Color Highlight:</strong> Visualización de colores
+              directamente en el código CSS.
+            </li>
+            <li>
+              <strong>CSS Peek:</strong> Acceso rápido a los estilos desde el
+              archivo HTML usando <code>Ctrl + Clic</code>.
+            </li>
+          </ul>
         </article>
 
         <article id="escritura-orden">
-            <h3>Escritura y Orden</h3>
-            <ul>
-                <li><strong>Auto Rename Tag:</strong> Sincronización automática de etiquetas de apertura y cierre.</li>
-                <li><strong>Prettier:</strong> Formateador automático de código (<code>Shift + Alt + F</code>).</li>
-                <li><strong>IntelliSense for CSS:</strong> Autocompletado inteligente de clases CSS en HTML.</li>
-            </ul>
+          <h3>Escritura y Orden</h3>
+          <ul>
+            <li>
+              <strong>Auto Rename Tag:</strong> Sincronización automática de
+              etiquetas de apertura y cierre.
+            </li>
+            <li>
+              <strong>Prettier:</strong> Formateador automático de código (<code
+                >Shift + Alt + F</code
+              >).
+            </li>
+            <li>
+              <strong>IntelliSense for CSS:</strong> Autocompletado inteligente
+              de clases CSS en HTML.
+            </li>
+          </ul>
         </article>
-        
-        <p><em>Consejo: Mantén instaladas solo las que uses para que VS Code siga siendo rápido.</em></p>
-    </section>
 
-    <hr />
+        <p>
+          <em
+            >Consejo: Mantén instaladas solo las que ue ses para que VS Code
+            siga siendo rápido.</em
+          >
+        </p>
+      </section>
 
-    <section id="personalizacion">
+      <hr />
+
+      <section id="personalizacion">
         <h1>Personalización: Idioma, Temas e Iconos</h1>
 
         <h2>1. Cambiar el idioma a Español</h2>
         <ol>
-            <li>Busca en extensiones (<code>Ctrl + Shift + X</code>): <strong>"Spanish Language Pack"</strong>.</li>
-            <li>Instala y selecciona <strong>"Change Language and Restart"</strong> en el aviso emergente.</li>
+          <li>
+            Busca en extensiones (<code>Ctrl + Shift + X</code>):
+            <strong>"Spanish Language Pack"</strong>.
+          </li>
+          <li>
+            Instala y selecciona
+            <strong>"Change Language and Restart"</strong> en el aviso
+            emergente.
+          </li>
         </ol>
 
         <h2>2. Temas y Estética</h2>
         <ul>
-            <li><strong>Colores:</strong> Presiona <code>Ctrl + K + T</code> para elegir un tema visual.</li>
-            <li><strong>Iconos:</strong> Instala la extensión <strong>"Material Icon Theme"</strong> para identificar archivos visualmente.</li>
+          <li>
+            <strong>Colores:</strong> Presiona <code>Ctrl + K + T</code> para
+            elegir un tema visual.
+          </li>
+          <li>
+            <strong>Iconos:</strong> Instala la extensión
+            <strong>"Material Icon Theme"</strong> para identificar archivos
+            visualmente.
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="atajos-vscode">
+        <h1>Guía Rápida de Atajos y Trucos</h1>
+        <p>
+          Domina el teclado para programar con la velocidad de un profesional.
+        </p>
+        <h1>⚡ ATAJOS COMPLETOS VS CODE</h1>
+
+        <h2>📁 ARCHIVOS Y CARPETAS (PROYECTOS)</h2>
+        <div class="box">
+          <p>
+            <span class="key">Ctrl + K</span> →
+            <span class="key">Ctrl + O</span> → 📂 Abrir carpeta
+          </p>
+          <p><span class="key">Ctrl + P</span> → Abrir archivo rápidamente</p>
+          <p><span class="key">Ctrl + O</span> → Abrir archivo</p>
+          <p>
+            <span class="key">Ctrl + Shift + N</span> → Nueva ventana de VS Code
+          </p>
+          <p><span class="key">Ctrl + W</span> → Cerrar archivo</p>
+          <p>
+            <span class="key">Ctrl + K</span> → <span class="key">F</span> →
+            Cerrar carpeta
+          </p>
+        </div>
+
+        <h2>📂 EXPLORADOR Y NAVEGACIÓN</h2>
+        <div class="box">
+          <p>
+            <span class="key">Ctrl + Shift + E</span> → Explorador de archivos
+          </p>
+          <p>
+            <span class="key">Ctrl + B</span> → Mostrar/ocultar barra lateral
+          </p>
+          <p>
+            <span class="key">Ctrl + Shift + F</span> → Buscar en todo el
+            proyecto
+          </p>
+          <p>
+            <span class="key">Ctrl + Shift + G</span> → Control de versiones
+            (Git)
+          </p>
+          <p><span class="key">Ctrl + Shift + D</span> → Panel de depuración</p>
+          <p><span class="key">Ctrl + Shift + X</span> → Extensiones</p>
+        </div>
+
+        <h2>✍️ EDICIÓN BÁSICA</h2>
+        <div class="box">
+          <p><span class="key">Ctrl + X</span> → Cortar línea</p>
+          <p><span class="key">Ctrl + C</span> → Copiar línea</p>
+          <p><span class="key">Ctrl + V</span> → Pegar</p>
+          <p><span class="key">Ctrl + Z</span> → Deshacer</p>
+          <p><span class="key">Ctrl + Y</span> → Rehacer</p>
+          <p><span class="key">Ctrl + Enter</span> → Nueva línea abajo</p>
+          <p>
+            <span class="key">Ctrl + Shift + Enter</span> → Nueva línea arriba
+          </p>
+        </div>
+
+        <h2>🧠 EDICIÓN AVANZADA (MAGIA REAL)</h2>
+
+        <h3>🖱️ Multicursor</h3>
+        <div class="box">
+          <p><span class="key">Alt + Clic</span> → Cursor múltiple</p>
+          <p><span class="key">Ctrl + Alt + ↑ / ↓</span> → Agregar cursores</p>
+          <p>
+            <span class="key">Ctrl + Shift + L</span> → Seleccionar todas las
+            coincidencias
+          </p>
+        </div>
+
+        <h3>🔎 Selección inteligente</h3>
+        <div class="box">
+          <p><span class="key">Ctrl + D</span> → Siguiente coincidencia</p>
+          <p><span class="key">Ctrl + U</span> → Deshacer selección</p>
+          <p>
+            <span class="key">Ctrl + Shift + → / ←</span> → Selección por
+            palabras
+          </p>
+          <p><span class="key">Ctrl + Shift + K</span> → Borrar línea</p>
+        </div>
+
+        <h3>📋 Duplicar y mover</h3>
+        <div class="box">
+          <p><span class="key">Shift + Alt + ↓ / ↑</span> → Duplicar línea</p>
+          <p><span class="key">Alt + ↓ / ↑</span> → Mover línea</p>
+          <p><span class="key">Shift + Alt + Drag</span> → Copiar bloque</p>
+        </div>
+
+        <div class="box">
+          <p><span class="key">Ctrl + F</span> → Buscar</p>
+          <p><span class="key">Ctrl + H</span> → Reemplazar</p>
+          <p><span class="key">F3 / Shift + F3</span> → Siguiente / anterior</p>
+          <p><span class="key">Alt + Enter</span> → Seleccionar todas</p>
+        </div>
+
+        <h2>🧹 FORMATO Y ORDEN</h2>
+        <div class="box">
+          <p><span class="key">Shift + Alt + F</span> → Formatear código</p>
+          <p><span class="key">Alt + Z</span> → Ajuste de línea</p>
+          <p><span class="key">Ctrl + /</span> → Comentar línea</p>
+        </div>
+
+        <h2>🧘 VISTA Y PRODUCTIVIDAD</h2>
+        <div class="box">
+          <p><span class="key">Ctrl + K → Z</span> → Modo Zen</p>
+          <p><span class="key">Ctrl + + / Ctrl + -</span> → Zoom</p>
+          <p><span class="key">Ctrl + 0</span> → Reset zoom</p>
+          <p><span class="key">F11</span> → Pantalla completa</p>
+          <p><span class="key">!</span> → Estructura básica html</p>
+        </div>
+
+        <div class="box">
+          <h2>Ejercicio</h2>
+          <ol>
+            <li>📁 Crea una carpeta en <strong>Mis documentos</strong>.</li>
+            <li>
+              🏷️ Asigna a la carpeta el nombre <strong>Ejercicio1_4to</strong>.
+            </li>
+            <li>💻 Abre <strong>Visual Studio Code</strong>.</li>
+            <li>📂 Abre la carpeta creada anteriormente.</li>
+            <li>
+              🧩 Verifica que las siguientes extensiones estén instaladas:
+              <ul>
+                <li>⚡ Live Server</li>
+                <li>🎨 Prettier</li>
+                <li>✏️ Auto Rename Tag</li>
+                <li>🔎 CSS Peek</li>
+                <li>🔒 Auto Close Tag</li>
+                <li>🌈 Color Highlight</li>
+              </ul>
+              <p>
+                ⬇️ Si alguna no está instalada, instálala antes de continuar.
+              </p>
+            </li>
+            <li>
+              📄 Crea los siguientes archivos:
+              <ul>
+                <li>
+                  <strong>index.html</strong> (Comience la edición con la
+                  estructura básica ingresando <strong>!</strong>)
+                </li>
+                <li><strong>styles.css</strong></li>
+              </ul>
+            </li>
+            <li>⌨️ Escribe el código correspondiente en cada archivo.</li>
+            <li>
+              😊 Agrega emojis a tu proyecto utilizando el siguiente recurso:
+              <a href="https://emojikeyboard.top/es/" target="_blank"
+                >Emoji Keyboard</a
+              >
+            </li>
+          </ol>
+
+          <article>
+            <h3>Archivo HTML</h3>
+            <img
+              src="vs_ejercicio_html.jpg"
+              alt="Código HTML del ejercicio en Visual Studio Code"
+            />
+          </article>
+
+          <article>
+            <h3>Archivo CSS</h3>
+            <img
+              src="vs_ejercicio_css.jpg"
+              alt="Código CSS del ejercicio en Visual Studio Code"
+            />
+          </article>
+        </div>
+      </section>
+
+      <section id="actividad-tarjeta">
+        <h1
+          style="
+            color: var(--primary);
+            text-align: center;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+          "
+        >
+          ACTIVIDAD PRÁCTICA:  <br>Modifique su Tarjeta Personal con HTML y CSS
+        </h1>
+
+        <h3>OBJETIVO</h3>
+        <p>
+          Modificar y mejorar una tarjeta personal utilizando HTML5 y CSS3,
+          aplicando diseño visual moderno, personalización y efectos
+          interactivos.
+        </p>
+
+        <h3>CONSIGNA GENERAL</h3>
+        <p>
+          A partir del código entregado por el docente, el estudiante deberá
+          crear una versión personalizada de la tarjeta digital. Se deberán
+          modificar y mejorar los siguientes elementos:
+        </p>
+        <ul style="list-style-type: &quot;✅ &quot;; padding-left: 20px">
+          <li>Información personal</li>
+          <li>Imagen</li>
+          <li>Contenido</li>
         </ul>
 
-      
-    </section>
+        <h2 style="margin-top: 30px">ACTIVIDADES</h2>
 
-    <hr />
+        <h3>1) PERSONALIZACIÓN DE DATOS</h3>
+        <p>Modificar la información del perfil cambiando:</p>
+        <ul style="list-style-type: &quot;• &quot;; padding-left: 20px">
+          <li>Nombre y apellido</li>
+          <li>Profesión o rol</li>
+          <li>Ciudad</li>
+          <li>Institución</li>
+          <li>Intereses</li>
+          <li>Correo electrónico</li>
+          <li>Teléfono</li>
+        </ul>
+        <p>
+          <em
+            >El contenido debe ser coherente y estar correctamente escrito.</em
+          >
+        </p>
 
-    <section id="atajos-vscode">
-        <h1>Guía Rápida de Atajos y Trucos</h1>
-        <p>Domina el teclado para programar con la velocidad de un profesional.</p>
-<h1>⚡ ATAJOS COMPLETOS VS CODE</h1>
+        <h3>2) CAMBIO DE IMAGEN</h3>
+        <p>
+          Reemplazar la imagen por una personal o temática. Y esta debe debe:
+        </p>
+        <ul style="list-style-type: &quot;✅ &quot;; padding-left: 20px">
+          <li>Visualizarse correctamente</li>
+          <li>Mantener forma circular</li>
+          <li>No deformarse</li>
+          <li>Verse centrada</li>
+        </ul>
 
-<h2>📁 ARCHIVOS Y CARPETAS (PROYECTOS)</h2>
-<div class="box">
+        <h3>3) MODIFICAR COLORES</h3>
+        <p>
+          Personalizar el diseño modificando el color de fondo, colores del
+          botón, colores de títulos/textos y colores de las tarjetas internas.
+          Se recomienda utilizar colores pastel o armónicos:
+        </p>
+        <code
+          >background: lavender; background: skyblue; background:
+          honeydew;</code
+        >
 
-  <p><span class="key">Ctrl + K</span> → <span class="key">Ctrl + O</span> → 📂 Abrir carpeta</p>
-  <p><span class="key">Ctrl + P</span> → Abrir archivo rápidamente</p>
-  <p><span class="key">Ctrl + O</span> → Abrir archivo</p>
-  <p><span class="key">Ctrl + Shift + N</span> → Nueva ventana de VS Code</p>
-  <p><span class="key">Ctrl + W</span> → Cerrar archivo</p>
-  <p><span class="key">Ctrl + K</span> → <span class="key">F</span> → Cerrar carpeta</p>
-</div>
+        <h3>4) MEJORAR EL BOTÓN</h3>
+        <p>
+          Modificar el código
+          <code>&lt;a href="#" class="boton"&gt;Contactar&lt;/a&gt;</code> para
+          convertir el botón en un enlace funcional seleccionando una opción:
+        </p>
 
-<h2>📂 EXPLORADOR Y NAVEGACIÓN</h2>
-<div class="box">
-  <p><span class="key">Ctrl + Shift + E</span> → Explorador de archivos</p>
-  <p><span class="key">Ctrl + B</span> → Mostrar/ocultar barra lateral</p>
-  <p><span class="key">Ctrl + Shift + F</span> → Buscar en todo el proyecto</p>
-  <p><span class="key">Ctrl + Shift + G</span> → Control de versiones (Git)</p>
-  <p><span class="key">Ctrl + Shift + D</span> → Panel de depuración</p>
-  <p><span class="key">Ctrl + Shift + X</span> → Extensiones</p>
-</div>
+        <div class="opciones-container">
+          <div class="opcion">
+            <strong>OPCIÓN A — Abrir correo electrónico</strong>
+            <p>
+              Utilizar <code>mailto:</code> para abrir la aplicación de correo.
+            </p>
+            <code
+              >&lt;a href="mailto:correo@gmail.com" class="boton"&gt; 📧
+              Contactar &lt;/a&gt;</code
+            >
+          </div>
+          <div class="opcion">
+            <strong>OPCIÓN B — Abrir WhatsApp</strong>
+            <p>Utilizar <code>wa.me</code> para abrir un chat de WhatsApp.</p>
+            <code
+              >&lt;a href="https://wa.me/3544666666" class="boton"&gt; 💬 Enviar
+              WhatsApp &lt;/a&gt;</code
+            >
+          </div>
+        </div>
 
-<h2>✍️ EDICIÓN BÁSICA</h2>
-<div class="box">
-  <p><span class="key">Ctrl + X</span> → Cortar línea</p>
-  <p><span class="key">Ctrl + C</span> → Copiar línea</p>
-  <p><span class="key">Ctrl + V</span> → Pegar</p>
-  <p><span class="key">Ctrl + Z</span> → Deshacer</p>
-  <p><span class="key">Ctrl + Y</span> → Rehacer</p>
-  <p><span class="key">Ctrl + Enter</span> → Nueva línea abajo</p>
-  <p><span class="key">Ctrl + Shift + Enter</span> → Nueva línea arriba</p>
-</div>
+        <p>
+          <strong>Mejoras visuales del botón requeridas (CSS):</strong> Agregar
+          ícono, efecto hover, animación y cambio de color al pasar el mouse.
+          Ejemplo:
+        </p>
+        <code
+          >.boton{ display:inline-block; padding:12px 20px; background:skyblue;
+          color:white; text-decoration:none; border-radius:30px;
+          transition:0.3s; animation:aparecer 1s ease; } .boton:hover{
+          background:lightseagreen; transform:scale(1.05); } @keyframes
+          aparecer{ from{ opacity:0; transform:translateY(20px); } to{
+          opacity:1; transform:translateY(0); } }</code
+        >
 
-<h2>🧠 EDICIÓN AVANZADA (MAGIA REAL)</h2>
+        <h3>5) AGREGAR UNA NUEVA SECCIÓN</h3>
+        <p>
+          Crear una nueva sección llamada <strong>“Habilidades”</strong> que
+          contenga una lista de conocimientos o tecnologías (HTML5, CSS3,
+          JavaScript, Diseño Web, GitHub):
+        </p>
+        <code
+          >&lt;section class="habilidades"&gt; &lt;h2&gt;Habilidades&lt;/h2&gt;
+          &lt;ul&gt; &lt;li&gt;HTML5&lt;/li&gt; &lt;li&gt;CSS3&lt;/li&gt;
+          &lt;li&gt;JavaScript&lt;/li&gt; &lt;/ul&gt; &lt;/section&gt;</code
+        >
 
-<h3>🖱️ Multicursor</h3>
-<div class="box">
-  <p><span class="key">Alt + Clic</span> → Cursor múltiple</p>
-  <p><span class="key">Ctrl + Alt + ↑ / ↓</span> → Agregar cursores</p>
-  <p><span class="key">Ctrl + Shift + L</span> → Seleccionar todas las coincidencias</p>
-</div>
-
-<h3>🔎 Selección inteligente</h3>
-<div class="box">
-  <p><span class="key">Ctrl + D</span> → Siguiente coincidencia</p>
-  <p><span class="key">Ctrl + U</span> → Deshacer selección</p>
-  <p><span class="key">Ctrl + Shift + → / ←</span> → Selección por palabras</p>
-  <p><span class="key">Ctrl + Shift + K</span> → Borrar línea</p>
-</div>
-
-<h3>📋 Duplicar y mover</h3>
-<div class="box">
-  <p><span class="key">Shift + Alt + ↓ / ↑</span> → Duplicar línea</p>
-  <p><span class="key">Alt + ↓ / ↑</span> → Mover línea</p>
-  <p><span class="key">Shift + Alt + Drag</span> → Copiar bloque</p>
-</div>
-
-<div class="box">
-  <p><span class="key">Ctrl + F</span> → Buscar</p>
-  <p><span class="key">Ctrl + H</span> → Reemplazar</p>
-  <p><span class="key">F3 / Shift + F3</span> → Siguiente / anterior</p>
-  <p><span class="key">Alt + Enter</span> → Seleccionar todas</p>
-</div>
-
-<h2>🧹 FORMATO Y ORDEN</h2>
-<div class="box">
-  <p><span class="key">Shift + Alt + F</span> → Formatear código</p>
-  <p><span class="key">Alt + Z</span> → Ajuste de línea</p>
-  <p><span class="key">Ctrl + /</span> → Comentar línea</p>
- 
-</div>
-
-<h2>🧘 VISTA Y PRODUCTIVIDAD</h2>
-<div class="box">
-  <p><span class="key">Ctrl + K → Z</span> → Modo Zen</p>
-  <p><span class="key">Ctrl + + / Ctrl + -</span> → Zoom</p>
-  <p><span class="key">Ctrl + 0</span> → Reset zoom</p>
-  <p><span class="key">F11</span> → Pantalla completa</p>
-  <p><span class="key">!</span> → Estructura básica html</p>
-</div>
-<div class="box">
-  <h2>Ejercicio</h2>
-
- <ol>
-  <li>📁 Crea una carpeta en <strong>Mis documentos</strong>.</li>
-
-  <li>🏷️ Asigna a la carpeta el nombre <strong>Ejercicio1_4to</strong>.</li>
-
-  <li>💻 Abre <strong>Visual Studio Code</strong>.</li>
-
-  <li>📂 Abre la carpeta creada anteriormente.</li>
-
-  <li>
-    🧩 Verifica que las siguientes extensiones estén instaladas:
-    <ul>
-      <li>⚡ Live Server</li>
-      <li>🎨 Prettier</li>
-      <li>✏️ Auto Rename Tag</li>
-      <li>🔎 CSS Peek</li>
-      <li>🔒 Auto Close Tag</li>
-      <li>🌈 Color Highlight</li>
-    </ul>
-
-    <p>⬇️ Si alguna no está instalada, instálala antes de continuar.</p>
-  </li>
-
-  <li>
-    📄 Crea los siguientes archivos:
-    <ul>
-      <li><strong>index.html</strong></li>
-      <ul>
-        <li>Comieze la edicion con la estructura básica en HTML  ingrese <strong>!</strong> (Abreviatura Emmet)</li>
-      </ul>
-      <li><strong>styles.css</strong></li>
-    </ul>
-  </li>
-
-  <li>⌨️ Escribe el código correspondiente en cada archivo.</li>
-
-<li>😊 Agrega emojis a tu proyecto utilizando el siguiente recurso:
-  <a href="https://emojikeyboard.top/es/" target="_blank">
-    Emoji Keyboard
-  </a>
-</li>
-</ol>
-
-  <section>
-    <h3>Archivo HTML</h3>
-    <img src="vs_ejercicio_html.jpg" alt="Código HTML del ejercicio en Visual Studio Code">
-  </section>
-
-  <section>
-    <h3>Archivo CSS</h3>
-    <img src="vs_ejercicio_css.jpg" alt="Código CSS del ejercicio en Visual Studio Code">
-  </section>
-</div>
-    </section>
+        <h3>6) AGREGA SECCIÓN REDES SOCIALES</h3>
+        <p>
+          Crear una sección adicional estructurada para añadir enlaces directos
+          a redes sociales (LinkedIn, GitHub, Instagram, etc.).
+        </p>
+      </section>
     </div>
-
 
     <footer>
       <p>IPEM 146 - Sistemas Digitales 2026</p>
